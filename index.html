@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/1d946b6af9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>Weather App</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <form class="searchSection">
+            <div class="row">
+              <div class="col-6">
+                <input type="search" placeholder="Enter a city..." autofocus=""
+                "on" class="searchBox form-control" id="search-input-text"/>
+              </div>
+              <div class="col-3">
+                <button
+                  type="submit"
+                  class="btn btn-info form-control shadow-sm"
+                  id="search-btn"
+                >
+                  Search
+                </button>
+              </div>
+
+              <div class="col-3">
+                <button
+                  type="submit"
+                  class="btn btn-success form-control shadow-sm"
+                  id="current-btn"
+                >
+                  Current
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <div class="row text-left currentCity">
+            <div class="col-6">
+              <h2 id="cityName">Malmö</h2>
+
+              <h3 id="currentDate">####</h3>
+              <h3 id="description">cloudy</h3>
+              <h3>Humidity: <span id="humidity">54</span>%</h3>
+              <h3>Wind: <span id="wind">3</span>m/s</h3>
+            </div>
+
+            <div class="col-3 currentTemp">
+              <h2 id="current-temp">3</h2>
+              <h3 id="celsius">°C</h3>
+            </div>
+          </div>
+        </div>
+        <div class="row text-center futureWeather">
+          <div class="col-2">
+            <h3>Sat</h3>
+            <i class="fa-solid fa-snowflake iconSmall"></i>
+            <h4>-3°C - 2 °C</h4>
+          </div>
+          <div class="col-2">
+            <h3>Sun</h3>
+            <i class="fa-solid fa-cloud-sun-rain iconSmall"></i>
+            <h4>1°C - 4 °C</h4>
+          </div>
+          <div class="col-2">
+            <h3>Mon</h3>
+            <i class="fa-solid fa-cloud-sun iconSmall"></i>
+            <h4>-1 °C - 2 °C</h4>
+          </div>
+          <div class="col-2">
+            <h3>Tue</h3>
+            <i class="fa-solid fa-cloud-sun-rain iconSmall"></i>
+            <h4>2 °C - 3 °C</h4>
+          </div>
+          <div class="col-2">
+            <h3>Wed</h3>
+            <i class="fa-solid fa-sun iconSmall"></i>
+            <h4>-3°C - 2 °C</h4>
+          </div>
+          <div class="col-2">
+            <h3>Thu</h3>
+            <i class="fa-solid fa-cloud-sun iconSmall"></i>
+            <h4>-1 °C - 2 °C</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h4 id="opensource"><a href="">Open source code</a> by WuchiaoH</h4>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
